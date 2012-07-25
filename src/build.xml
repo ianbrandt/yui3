@@ -9,6 +9,12 @@
             </subant>
         </sequential>
     </macrodef>
+    <target name="local">
+        <build-all target="local"/>
+    </target>
+    <target name="deploy">
+        <build-all target="deploy"/>
+    </target>
     <target name="all">
         <build-all target="all"/>
     </target>

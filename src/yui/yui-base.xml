@@ -8,5 +8,5 @@
     <property file="../loader/loader.meta.properties" />
     <import file="${builddir}/3.x/bootstrap.xml" description="Default Build Properties and Targets" />
     <import file="core-extras.xml" description="YUI Core Extras" />
-    <target name="local" depends="clean, init, build, core, minify, lint" description="Build and Deploy to Local Build Directory" />
+    <target name="local" depends="init, build, core, minify, lint" description="Build and Deploy to Local Build Directory" />
 </project>

@@ -9,6 +9,7 @@ CVS/
 .*.swp
 .svn
 *~
+antro-report-*.json
 src/build.log
 .com.apple.timemachine.supported
 src/out

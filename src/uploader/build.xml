@@ -5,10 +5,26 @@
 <project name="Uploader" default="local">
     <description>Uploader Build File</description>
 
+    <macrodef name="build-uploader">
+        <attribute name="target"/>
+        <sequential>
+            <ant antfile="uploader-queue.xml" target="@{target}" useNativeBasedir="true" />
+            <ant antfile="uploader-html5.xml" target="@{target}" useNativeBasedir="true" />
+            <ant antfile="uploader-flash.xml" target="@{target}" useNativeBasedir="true" />
+            <ant antfile="uploader.xml" target="@{target}" useNativeBasedir="true" />
+        </sequential>
+    </macrodef>
+
+    <target name="local">
+        <build-uploader target="local"/>
+    </target>
+    <target name="deploy">
+        <build-uploader target="deploy"/>
+    </target>
     <target name="all">
-    	<ant antfile="uploader-queue.xml" target="all" />
-    	<ant antfile="uploader-html5.xml" target="all" />   	
-    	<ant antfile="uploader-flash.xml" target="all" />
-    	<ant antfile="uploader.xml" target="all" />
+        <build-uploader target="all"/>
+    </target>
+    <target name="clean">
+        <build-uploader target="clean"/>
     </target>
 </project>

@@ -4,5 +4,5 @@
     <property file="build-yui3.properties" />
     <import file="${builddir}/3.x/bootstrap.xml" description="Default Build Properties and Targets" />
     <import file="loader-extras.xml" description="YUI Core Extras" />
-    <target name="local" depends="clean, init, build, loader, minify, lint" description="Build and Deploy to Local Build Directory" />
+    <target name="local" depends="init, build, loader, minify, lint" description="Build and Deploy to Local Build Directory" />
 </project>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="YUI" default="local">
     <property file="build.parse.properties" />
-    <import file="${builddir}/3.x/bootstrap.xml" 
+    <import file="${builddir}/3.x/bootstrap.xml"
             description="Default Build Properties and Targets" />
 
     <!--
@@ -15,5 +15,5 @@
         </replaceregexp>
     </target>
 
-    <target name="local" depends="clean, init, build, minify, replace-eval, lint" description="Build and Deploy to Local Build Directory"/>
+    <target name="local" depends="init, build, minify, replace-eval, lint" description="Build and Deploy to Local Build Directory"/>
 </project>
